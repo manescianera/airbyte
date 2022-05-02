@@ -20,6 +20,7 @@ from source_amazon_seller_partner.streams import (
     BrandAnalyticsMarketBasketReports,
     BrandAnalyticsRepeatPurchaseReports,
     BrandAnalyticsSearchTermsReports,
+    GetXmlBrowseTreeData,
     FbaInventoryReports,
     FbaOrdersReports,
     FbaShipmentsReports,
@@ -161,6 +162,7 @@ class SourceAmazonSellerPartner(AbstractSource):
             BrandAnalyticsRepeatPurchaseReports(**stream_kwargs),
             BrandAnalyticsAlternatePurchaseReports(**stream_kwargs),
             BrandAnalyticsItemComparisonReports(**stream_kwargs),
+            GetXmlBrowseTreeData(**stream_kwargs)
         ]
 
     def spec(self, *args, **kwargs) -> ConnectorSpecification:
